@@ -1,0 +1,50 @@
+### GET request to example server
+POST http://localhost:8080/load
+Content-Type: application/json
+
+{
+  "loadingPoint": "chennai",
+  "unloadingPoint": "mumbai",
+  "productType": "chemicals",
+  "truckType": "van",
+  "noOfTrucks": 4,
+  "weight": 150,
+  "comment": "",
+  "shipperId" : "123e4167-e89b-42d3-a456-556642040000",
+  "date" : "08-06-2024"
+
+}
+
+###
+
+GET http://localhost:8080/load?shipperId=123e4167-e89b-42d3-a456-556642040000
+Accept: application/json
+
+###
+
+GET http://localhost:8080/load/3
+Accept: application/json
+
+###
+
+PUT http://localhost:8080/load/3
+Content-Type: application/json
+
+
+{
+  "loadId": 3,
+  "loadingPoint": "karnataka",
+  "unloadingPoint": "mumbai",
+  "productType": "chemicals",
+  "truckType": "van",
+  "noOfTrucks": 4,
+  "weight": 150,
+  "comment": "",
+  "shipperId": "123e4167-e89b-42d3-a456-556642040000",
+  "date": "08-06-2024"
+}
+
+###
+
+DELETE http://localhost:8080/load/1
+Accept: application/json
